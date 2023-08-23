@@ -19,7 +19,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
@@ -31,7 +31,6 @@
             android:layout_weight="1"
             android:layout_margin="2dp"/>
 
-
         <Button
             android:id="@+id/btn_count"
             android:layout_width="wrap_content"
@@ -39,7 +38,26 @@
             android:text="@string/count"
             android:layout_weight="1"
             android:layout_margin="2dp"/>
+
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/cek_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"/>
+
+    <EditText
+        android:id="@+id/cek_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pass"/>
+
+    <Button
+        android:id="@+id/btn_get_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET EMAIL"/>
 
 
 </LinearLayout>

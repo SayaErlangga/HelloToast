@@ -29,6 +29,29 @@ class MainActivity : AppCompatActivity() {
                     txtNumber.setBackgroundResource(R.color.purple_500)
                 }
             }
+
+            val email = "wkasd"
+            val pass = "pw123"
+            btnGetText.setOnClickListener {
+                val emailText = cekEmail.text.toString()
+                val passText = cekPass.text.toString()
+                //show toast
+                if((emailText == email) && (passText == pass)){
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Berhasil Login",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Email atau Password Salah",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+            }
+
             btnToast.setOnClickListener {
                 Toast.makeText(this@MainActivity, "last count: $number", Toast.LENGTH_SHORT).show()
             }
