@@ -16,9 +16,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         with(binding){
             txtNumber.text = number.toString()
+            //change background colorbtn
+
+
             btnCount.setOnClickListener {
                 number++
                 txtNumber.text = number.toString()
+
+                if (number % 2 == 0){
+                    txtNumber.setBackgroundResource(R.color.purple_200)
+                } else {
+                    txtNumber.setBackgroundResource(R.color.purple_500)
+                }
             }
             btnToast.setOnClickListener {
                 Toast.makeText(this@MainActivity, "last count: $number", Toast.LENGTH_SHORT).show()
